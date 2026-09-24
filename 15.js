@@ -1,3 +1,20 @@
-// Leer un número N. Mostrar todos los números primos entre 2 y N, y al final cuántos hay.
-// Un número es primo si solo es divisible entre 1 y entre sí mismo. Para saber si n es divisible
-// entre d usa n % d === 0.
+const contarDivisores = numero => {
+    let divisores = 0;
+    for(let i = 1; i <= numero; i++){
+        if(numero % i == 0) divisores++;
+    }
+    return divisores;
+}
+
+const esPrimo = numero => contarDivisores(numero) == 2;
+
+let n = Number(prompt("Límite:"));
+let cantidad = 0;
+
+for(let i = 2; i <= n; i++){
+    if(esPrimo(i)){
+        console.log(i);
+        cantidad++;
+    }
+}
+console.log("Cantidad de primos: " + cantidad);
