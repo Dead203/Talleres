@@ -43,8 +43,6 @@ const division3 = (num5, num6) =>{
         return num5/num6
 }
 
-
-
 for(let i=1; i<=n; i++){
     genero = prompt(`Ingrese el genero del estudiante ${i} (H/M): `);
     categorizacion(genero);
